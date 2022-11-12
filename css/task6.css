@@ -1,0 +1,142 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: OpenSans-Regular;
+}
+body{
+  background-color: #483C6E;
+  padding: 150px 300px;
+}
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
+.leftside{
+  background-color: #FEFEFE;
+}
+.rightside{
+  background-color: #161D23;
+  height: 97.3%;
+  padding: 15px;
+}
+.main_left{
+  padding: 30px 150px;
+}
+.main{
+  box-shadow: 0px 0px 25px #272727;
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+.header{
+  background-image: url('../images/header.jpg');
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center -70px;
+}
+.author{
+  color: #D8994B;
+  font-size: 13px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: Franklin Gothic Medium;
+  margin: 15px 0px;
+}
+h1{
+  font-family: Franklin Gothic Medium;
+}
+h2{
+  margin: 15px 0;
+}
+.img{
+  margin: 30px 0px;
+  background-image: url("https://zernograd.com/wp-content/uploads/2017/07/lezhen-na-liste.jpg");
+  background-size: contain;
+  height: 200px;
+  background-repeat: no-repeat;
+  flex-basis: 75%
+}
+.container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+}
+.container span{
+  width: 150px;
+  text-align: left;
+}
+.timeline{
+  margin-left: 20px;
+}
+ul.timeline li
+{
+  position: relative;
+  color: #888;
+  list-style: none;
+  margin: 25px 0;
+}
+
+
+
+ul.timeline:before
+{
+  content: "";
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: -20px;
+  top: 0.1em;
+  color: #aaa;
+
+}
+
+ul.timeline:after
+{
+  content: "";
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: -20px;
+  top: -1em;
+  color: #aaa;
+}
+.zav{
+  color: #D8994B;
+  font-weight: bold;
+  margin-left: 20px;
+}
+.rightside h3{
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+}
+.text{
+  display: block;
+  padding: 5px 0px;
+  font-size: 12px;
+}
+.author2{
+  font-style: italic;
+  font-weight: 600;
+  font-size: 11px;
+}
+.h3_selected{
+  color: #D8994B !important;
+  font-weight: 400;
+  font-size: 16px;
+}
+.text_selected{
+  display: block;
+  padding: 5px 0px;
+  font-size: 12px;
+  color: white;
+}
+.author2_selected{
+  font-style: italic;
+  font-weight: 600;
+  font-size: 11px;
+  color: #D8994B;
+}

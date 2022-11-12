@@ -1,0 +1,21 @@
+*{
+  font-family: Verdana;
+}
+h1{
+  text-align: center;
+  color: #483D8A;
+}
+h2{
+  color: #778495;
+}
+pre{
+  margin-left: 0px;
+  white-space: pre-line;
+  line-height: 23px;
+}
+i{
+  font-size: 14px;
+}
+h3{
+  color: #778495;
+}

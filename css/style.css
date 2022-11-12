@@ -1,0 +1,83 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  background-color: #F1F6FA;
+  height: auto;
+}
+#focus{
+  background-color: black;
+  opacity: 50%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+h2{
+  color: white;
+  float: left;
+}
+.bi-journal{
+  float: left;
+  color: white;
+  font-size: 25px;
+  margin-right: 10px;
+}
+#Menu {
+  width: 400px !important;
+  float: left;
+  height: 100%;
+  position: absolute;
+  vertical-align: top;
+  transform: translateX(-105%);
+  background-color: #3C4048;
+  transition: 0.5s;
+  z-index: 5;
+}
+.badge{
+  font-family: Comic Sans MS;
+}
+
+main{
+  background-color: #F1F6FA;
+  width: 100%;
+  height: 100%;
+}
+.close_btn{
+  color: white !important;
+}
+#Zag{
+  padding: 3.75px;
+  padding-top: 7.50px;
+}
+
+.list-group{
+  margin-left: 15px;
+  margin-right: 3px !important;
+}
+#Menu a{
+  text-decoration: none;
+}
+#Menu .col-2{
+  margin-left: 20px;
+}
+.list-group-item a {
+  text-decoration: none;
+  width: 100%;
+}
+.fw-bold{
+  color: black;
+
+}
+.fw-bold{
+  font-size: 20px;
+}
+.list-group-item{
+  padding: 10px !important;
+}
+.list-group a{
+  display: block;
+}
+
+/* Task 1 =====================================================================*/
