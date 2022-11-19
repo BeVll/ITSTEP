@@ -1,0 +1,47 @@
+:root{
+  --primary:rgba(200, 0, 0, 0.1);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial
+}
+div{
+  background-color: rgba(255, 0, 50, 0.04);
+  m argin: 0 25%;
+  padding: 25px;
+}
+ol{
+  background-color: rgba(220, 0, 50, 0.3);
+  padding: 25px;
+  list-style: decimal;
+}
+li{
+  background-color: rgba(220, 0, 50, 0.4);
+  counter-increment: index;
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  box-sizing: border-box;
+  height: 35px;
+  margin: 10px;
+}
+span{
+  background-color: rgba(100, 0, 50, 0.4);
+  display: block;
+  width: fit-content;
+}
+li::before {
+  content: counters(index, ".", decimal);
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  min-width: 40px;
+  padding-right: 12px;
+  padding: 0px;
+  align-self: flex-start;
+  background-color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

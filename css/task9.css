@@ -1,0 +1,16 @@
+td{
+  text-align: center;
+  padding: 3px 8px;
+}
+.header{
+  background-color: #20B2AA;
+}
+table{
+  border: 1px solid white;
+  color: white;
+  border-spacing: 0px;
+}
+.data{
+  color: white;
+  background-color: #323232;
+}

@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  margin: 50px;
+}
+.top1{
+  position: relative;
+  width: fit-content;
+  background-color: #FF8029;
+  border: 2px solid black;
+  display: block;
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  content:"";
+}
+.top1:hover{
+  background-color: #7F7F7F;
+}
+.top1::before{
+  content:"";
+  background-color: #22B14C;
+  width:100%;
+  height: 5px;
+  display: block;
+  position: absolute;
+  transition: 0.2s;
+  z-index: 9;
+  opacity: 0%;
+  top: 150%;
+  border-radius: 5px;
+}
+.top1:hover::before{
+  opacity: 100%;
+}
+.top1:hover::after{
+  opacity: 100%;
+}
+
+.top1::after{
+    content:"";
+    background-color: red;
+    width:50%;
+    height: 104%;
+    display: block;
+    position: absolute;
+    transition: 0.2s;
+    z-index: 9;
+    float: right;
+    opacity: 0%;
+    right: -2px;
+    top: -2px;
+}
