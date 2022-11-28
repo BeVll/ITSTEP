@@ -1,0 +1,88 @@
+*{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+header{
+    padding: 20px 50px;
+    background-color: #923158;
+    color: white;
+    font-size: 15px;
+    margin: 15px;
+}
+nav{
+    padding: 10px 50px;
+    background-color: #6E1237;
+    color: white;
+    font-size: 15px;
+    margin: 15px;
+}
+.leftside{
+    float: left;
+    width: 250px;
+    display: block;
+}
+.ASIDE1{
+    background-color: #B65B80;
+    margin-right: 7.5px;
+    padding: 30px 50px;
+    color: white;
+    font-size: 15px;
+    margin-left: 7.5px;
+    position: relative;
+    padding-right: 150px;
+}
+.ASIDE2{
+    background-color: #B65B80;
+    padding: 30px 50px;
+    padding-bottom: 90px;
+    color: white;
+    font-size: 15px;
+    margin-right: 7.5px;
+    margin-top: 15px;
+    margin-left: 7.5px;
+}
+.MainContent{
+    background-color: #B65B80;
+    margin: 0 7.5px;
+    padding: 30px 50px;
+    color: white;
+    font-size: 15px;
+    width: 68%;
+    float: left;
+}
+.CONTENT{
+    width: 100%;
+    margin: 7.5px 7.5px;
+    display: flex;
+
+}
+section{
+    background-color: #DB92AF;
+    padding: 30px 50px;
+    margin-top: 15px;
+    padding-bottom: 70px;
+}
+.ASIDE3{
+    background-color: #B65B80;
+    padding: 30px 50px;
+    padding-bottom: 90px;
+    color: white;
+    font-size: 15px;
+    margin-left: 7.5px;
+    width: 83px;
+    float: left;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: 10px;
+    line-height: 70px;
+    text-align: center;
+    height: 190px;
+}
+footer{
+    padding: 10px 50px;
+    background-color: #6E1237;
+    color: white;
+    font-size: 15px;
+    margin: 15px;
+}
