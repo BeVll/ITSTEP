@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+body{
+    background-color: #F5F5F5;
+}
+li{
+    width: auto;
+    height: auto;
+    background-color: white;
+    margin: 10px 10px;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 10px;
+    display: inline-block;
+    transform: scale(1);
+}
+li div{
+    vertical-align: bottom;
+    width: 250px;
+}
+li:hover{
+    transform: scale(1.15);
+}
+ul{
+    list-style: none;
+    width: 100%;
+    display: block;
+    margin: 50px;
+}
+li h3{
+    text-align: center;
+    margin-top: 25px;
+}
+li hr{
+    margin-top: 10px;
+    height: 3px;
+    background-color: #C83857;
+    border: 0;
+}
+.price{
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 15px;
+}
+.pmonth{
+    color: #DBDBDB;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+li .khar{
+    text-align: center;
+    margin: 15px 0;
+    font-weight: bold;
+}
+li button{
+    width: 100px;
+    margin: auto;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    height: 40px;
+    border: 0;
+    background-color: #C73756;
+    color: white;
+    font-size: 17px;
+}
+li:first-child button{
+    background-color: #C73756;
+}
+li:last-child button{
+    background-color: #63BB34;
+}
+li:last-child hr{
+    background-color: #63BB34;
+}
+li:nth-child(2) button{
+    background-color: #D7913B;
+}
+li:nth-child(2) hr{
+    background-color: #D7913B;
+}
+li:nth-child(3) button{
+    background-color: #2B6689;
+}
+li:nth-child(3) hr{
+    background-color: #2B6689;
+}

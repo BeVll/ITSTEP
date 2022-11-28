@@ -7,14 +7,41 @@ body{
   height: 1800px;
 }
 th{
-  width: 150px;
+  min-width: 100px;
   background-color: #ADD8E6;
-  display: block;
   font-size: 14px;
-  padding: 3px;
+  padding: 10px 10px;
   margin: 0px;
 }
-.head{
+tr:first-child{
   margin: 0;
   padding: 0;
+  position: sticky;
+  top: 0;
+}
+table{
+  width: auto;
+  overflow-x: auto;
+  display: block;
+}
+tr{
+  width: 100%;
+}
+td:first-child{
+  background-color: #ADD8E6;
+  font-size: 14px;
+  padding: 10px 0;
+  margin: 0px;
+  font-weight: 600;
+  position: sticky;
+  left: 0;
+}
+td{
+  text-align: center;
+  min-width: 100px;
+  padding: 10px 10px;
+  font-size: 15px;
+}
+tr:nth-child(even){
+  background-color: #E9E9E9;
 }
