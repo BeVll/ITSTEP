@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Document</title>
 </head>
 <body>
@@ -30,4 +31,36 @@
 
     </script>
 </body>
+=======
+    <link rel="stylesheet" href="../css/18.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form onsubmit="Send()">
+        <h1>Contact Form</h1>
+        <input class="inp" type="text" name="login" placeholder="Name"><br>
+        <input class="inp" type="email" name="email" placeholder="Email"><br>
+        
+        <input class="inp" type="text" name="number" placeholder="Phone"><br>
+        
+        <input class="rad" type="radio" id="male" name="male" value="male">
+        <label for="male">Male</label><br>
+        
+        <input class="rad" type="radio" id="female" name="male" value="female">
+        <label for="female">Female</label><br>
+        <button type="submit">Submit</button>
+      </form>
+    <script>
+        function Send(){
+            event.preventDefault();
+            console.log("name: " + event.target.elements.login.value);
+            console.log("email: " + event.target.elements.email.value);
+            console.log("phone: " + event.target.elements.number.value);
+            console.log("male/female: " + event.target.elements.male.value);
+        }
+    </script>
+</body>
+
+>>>>>>> 7f14d7f212954d39a61e5e44f52979da7972399f
 </html>
