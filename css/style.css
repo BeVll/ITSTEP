@@ -11,7 +11,7 @@ body{
   opacity: 50%;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: auto;
   display: none;
 }
 h2{
@@ -27,13 +27,14 @@ h2{
 #Menu {
   width: 400px !important;
   float: left;
-  height: 100%;
+  height: auto;
   position: absolute;
   vertical-align: top;
   transform: translateX(-105%);
   background-color: #3C4048;
   transition: 0.5s;
   z-index: 5;
+  padding-bottom: 10px;
 }
 .badge{
   font-family: Comic Sans MS;
