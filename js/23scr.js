@@ -97,21 +97,69 @@ function Task5(){
         alert("Число непаліндром!");
     }
 }
-Task6();
-function prac(){
-   let user = {
-    name: 'Jay',
-    branch: 'Computer Science'
-   }
-   console.log(user.name + " | " + user.branch);
+function Task6(){
+    event.preventDefault();
+    var second_val = document.getElementById('currency').selectedIndex;
+    let kurs = 0;
+    switch (second_val) {
+        case 0:
+            kurs = document.getElementById('value1').value * 0.95;
+            document.getElementById('result').innerHTML = kurs + " EUR";
+            break;
+        case 1:
+            kurs = document.getElementById('value1').value * 36.91;
+            document.getElementById('result').innerHTML = kurs + " UAH";
+            break;
+        case 2:
+            kurs = document.getElementById('value1').value * 1.70;
+            document.getElementById('result').innerHTML = kurs + " AZN";
+            break;
+        default:
+            break;
+    }
 }
-// function SumOfNum(num) {
-//     let sum = 0
-//     while (num) {
-//         sum += num % 10;
-//         num = (num - num % 10) / 10;
-//     }
-//     return sum;
-// }
-
-// alert(SumOfNum(26368));
+function Task7(){
+    let res = prompt("Введіть суму: ");
+    if(res >= 200 && res < 300) {
+       res = res - (res * 0.03);
+    }
+    else if(res >= 300 && res < 500) {
+        res = res - (res * 0.05);
+    }
+    else if(res >= 500) {
+        res = res - (res * 0.07);
+    }
+    alert("Сума зі знижкою: " + res);
+}
+function Task8(){
+    let c = prompt("Введіть довжину кола: ");
+    let p = prompt("Введіть периметр квадрата: ");
+    let d = c/3.14;
+    let l = p/4;
+    if(d < l){
+        alert("Поміститься!");
+    }
+    else{
+        alert("Не поміститься!");
+    }
+}
+function Task9(){
+    let capital = prompt('Столиця України? 1 - London 2 - New York 3 - Kyiv');
+    let capital2 = prompt('Столиця США? 1 - New York 2 - Washington 3 - Chicago');
+    let capital3 = prompt('Столиця Іспанії? 1 - Barcelona 2 - Madrid 3 - Valencia');
+    let score = 0;
+    if (capital == 3)
+        score += 2;
+    if (capital2 == 2)
+        score += 2;
+    if (capital3 == 2)
+        score += 2;
+    alert('Балів: ' + score);
+}
+function Task10(){
+    let date = prompt('Введіть дату(xx-xx-xxxx): ');
+    let oldDate = new Date(date); 
+    oldDate.setDate(oldDate.getDate()+1);
+    alert(oldDate);
+}
+Task10();

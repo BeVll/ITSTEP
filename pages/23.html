@@ -41,17 +41,24 @@
             border-radius: 5px;
             padding: 5px 5px;
         }
+        p{
+            height: 20px;
+            width: 100%;
+            display: block;
+            margin: 5px;
+        }
     </style>
 </head>
 <body>
     <form action="">
-        <input type="number" placeholder="USD">
-        <select name="" id="">
+        <input type="number" id="value1" value="1" placeholder="USD">
+        <select name="" id="currency">
             <option value="EUR">EUR</option>
             <option value="UAH">UAH</option>
             <option value="AZN">AZN</option>
         </select>
-        <button>Convert</button>
+        <button onclick="Task6()">Convert</button>
+        <p id="result"></p>
     </form>
     <script src="../js/23scr.js"></script>
 </body>
