@@ -27,6 +27,7 @@ array.push(pers, pers2);
 showTable(array);
 
 function hide(id){
+    event.stopPropagation()
     switch (id) {
         case 0:
             if(col1){
