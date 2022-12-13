@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.submit{
+    margin: 10px 0;
+    width: 100%;
+}
+
+.add{
+    margin-right: 20px;
+    width: 150px;
+    float: right;
+}
+th{
+    transition: 0.3s;
+    cursor: pointer;
+}
+th:nth-child(1){
+    width: auto;
+}
+th:hover{
+    background-color: #383F46 !important;
+
+}
+i{
+    color: white;
+}
+a{
+    float: right;
+    transition: 0.3s;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+a:hover{
+    background-color: #A7BCD0;
+    
+}
