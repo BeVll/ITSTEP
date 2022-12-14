@@ -100,17 +100,70 @@ function Task6(){
     } while (check);
 }
 function Task7(){
+    let arr = [];
     let digit = prompt("Введіть число: ");
     let count = prompt("Введіть кількість пересувань: ");
     if(digit.length < count){
         console.log("Кількість пересувань більше за число!");
     }
+
     else{
+        
+        for(let i=0;i<digit.length;i++){
+            arr.push(digit[i]);
+        }
         for (let i = 0; i < count; i++) {
-            let tmp = digit[i];
+            arr.push(arr.shift());
             
         }
     }
-    console.log(i);
+    console.log(arr);
 }
-Task7();
+function Task8(){
+    let arr = ["Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота", "Неділя"];
+    let i = 0;
+    do {
+        alert(arr[i]);
+        if(i == 6){
+            i=0;
+        }
+        else{
+            i++;
+        }
+    } while (confirm("Наступний день?"));
+}
+function Task9(){
+    for (let i = 2; i <= 9; i++) {
+        for(let x = 1; x <= 10; x++){
+            console.log(i + " * " + x + " = " + i*x);
+        }
+        console.log("");
+    }
+}
+function Task10() {
+    // alert("Загадайте число від 0 до 100");
+    // let res = "";
+    // do {
+    //     let rnd = Math.floor(Math.random() * 101);
+    //     res = prompt(`Ваше число > {rnd}`)
+    // } while (res != "=");
+
+let arr = [];
+for (let i = 0; i <= 100; i++) {
+    arr.push(i.toString());  
+}
+while(true){
+  let res = prompt(`Введіть > чи <, чи == за це значенння ${arr[Math.floor(arr.length / 2)]} ?`);
+  if(res == '=='){
+    alert(`Ви загадали число ${arr[Math.floor(arr.length / 2)]}`);
+    break;
+  }
+  if(res == '>'){
+    arr = arr.slice(Math.floor(arr.length / 2));
+  }
+  if(res == '<') {
+    arr = arr.slice(0, Math.floor(arr.length / 2));
+  }
+}
+}
+Task10();
