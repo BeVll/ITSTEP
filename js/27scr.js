@@ -51,4 +51,66 @@ function Task3(){
     }
     console.log(str);
 }
-Task3();
+function Task1_2(){
+    let str = "abc";
+    str = str.split('');
+    let a = str.find(item => item != "a" && item != "b" && item != "c");
+    if(a == undefined){
+        console.log("Тільки ці символи!");
+    }
+    else{
+        console.log("Є інші символи!");
+    }
+}
+function Task2_2(){
+    let str = "123456789";
+    str = str.split('');
+    let arr = [];
+    for (let i = 2; i < str.length; i += 3) {
+        arr.push(str.filter(item => item == str.at(i)));
+    }
+    console.log(arr);
+}
+function Task2_3(){
+    let str = "abcdafavdksbsf";
+    str = str.split('');
+    let arr = [];
+    str = str.map(item => item.replace("a", "A"));
+    str = str.map(item => item.replace("b", "B"));
+    console.log(str);
+}
+function Task2_4(){
+    
+    let arr = [];
+    for(let i=0;i<15;i++){
+        arr.push(i);
+    }
+    arr = arr.map(item => (arr.indexOf(item)*arr.indexOf(item)));
+    console.log(arr);
+}
+function Task2_5(){
+    
+    let arr = ["fdsfdsf", "fdsf", "safddsaf", "afdsfasddsfsdfsdfs", "as"];
+
+    arr = arr.sort(function(a, b) {
+        if (a.length > b.length) return 1;
+        if (a.length == b.length) return 0;
+        if (a.length < b.length) return -1;
+      });
+    console.log(arr);
+}
+function Task2_6(){
+    let str = "Good";
+    str = str.split('');
+
+    str = str.reverse();
+    console.log(str);
+}
+function Task2_7(){
+    let str = "Берестюк Владислав";
+    str = str.split(' ');
+    str = str.reverse();
+    str = str.join(' ');
+    console.log(str);  
+}
+Task2_7();
