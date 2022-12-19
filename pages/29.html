@@ -24,33 +24,51 @@
 </head>
 <body>
     <div id="full"></div>
-    
+    <div></div>
     <script>
         let full = document.getElementById("full");
         full.onclick = function(event){
             event.stopPropagation();
-            let str = `<div class="def" ondblclick="del(this)" style="left: ${(event.clientX-75)}px; top: ${(event.clientY-75)}px; background-color: ${randomColor()};"></div>`;
-            // let div = document.createElement("div");
-            // div.style.backgroundColor = randomColor();
-            // div.style.width = "150px";
-            // div.style.height = "150px";
-            // div.style.position = "absolute";
-            // div.style.left = (event.clientX-75) + "px";
-            // div.style.top = (event.clientY-75) + "px";
-            // // div.style.left = "41px";
-            // // div.style.top = "41px";
-            // div.style.boxShadow = "0px 0px 5px black";
-            // div.ondblclick = "del(this)";
             
-            // full.appendChild(div);
-            full.innerHTML += str;
+                if (event.detail === 1) {
+                    let str = `<div class="def" draggable="true" ondragend="pos(this)" ondrag="dr(this)" style="left: ${(event.clientX-75)}px; top: ${(event.clientY-75)}px; background-color: ${randomColor()};"></div>`;
+                    // let div = document.createElement("div");
+                    // div.style.backgroundColor = randomColor();
+                    // div.style.width = "150px";
+                    // div.style.height = "150px";
+                    // div.style.position = "absolute";
+                    // div.style.left = (event.clientX-75) + "px";
+                    // div.style.top = (event.clientY-75) + "px";
+                    // // div.style.left = "41px";
+                    // // div.style.top = "41px";
+                    // div.style.boxShadow = "0px 0px 5px black";
+                    // div.ondblclick = "del(this)";
+                    
+                    // full.appendChild(div);
+                    full.innerHTML += str;
+                } else if (event.detail === 2) {
+                    event.target.remove();
+                }
+   
+            
+        }
+        function dr(elem){
+            let divs = full.children;
+            for (let i = 0; i < divs.length; i++) {
+                if(divs[i] != elem){
+                    divs[i].style.backgroundColor = randomColor();
+                }
+                
+            }
+            elem.style.left = (event.clientX-75) + "px";           
+            elem.style.top = (event.clientY-75) + "px";
+            console.log(elem.style.left, ", ", elem.style.top);
         }
         
-       function del(elem){
-            full.lastChild.remove();
-            full.lastChild.remove();
-            elem.remove();
-       }
+        function pos(elem){
+            elem.style.left = (event.clientX-75) + "px";
+            elem.style.top = (event.clientY-75) + "px";
+        }
        function randomColor(){
         var x = Math.floor(Math.random() * 256);
         var y = Math.floor(Math.random() * 256);
