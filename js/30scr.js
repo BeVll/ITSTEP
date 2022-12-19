@@ -60,6 +60,44 @@ function Task6(min, max){
 }
 
 function Task7(h, m, s){
-    
+    if(m == null && s == null){
+        return(`${h}:00:00`);
+    }
+    else if(m == null){
+        return(`${h}:00:${s}`);
+    }
+    else if(s == null){
+        return(`${h}:${m}:00`);
+    }
+    else{
+        return(`${h}:${m}:${s}`);
+    }
 }
-Task6(1, 10000);
+function Task8(h, m, s){
+    s += m*60;
+    s += h*3600;
+    return s;
+}
+function Task9(s){
+    var hours = Math.floor(s / 3600);
+    var minutes = Math.floor((s - (hours * 3600)) / 60);
+    var seconds = s - (hours * 3600) - (minutes * 60);
+    
+    if(seconds < 10){
+        seconds = "0" + seconds;
+    }
+    if(minutes < 10){
+        minutes = "0" + minutes;
+    }
+    if(hours < 10){
+        hours = "0" + hours;
+    }
+
+    return hours + ':' + minutes + ':' + seconds;
+}
+function Task10(h1, m1, s1, h2, m2, s2){
+    let res = Task8(h1, m1, s1) - Task8(h2, m2, s2);
+    return Task9(res);
+}
+
+alert(Task10(6, 0, 0, 3, 15, 10));
