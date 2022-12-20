@@ -48,4 +48,14 @@ function Task1(digit, steps) {
     }
     return arr.join("*");
   }
-alert(Task5(18, [], 2));
+
+  function Task6(i) {
+    if(i <= 1){
+      return i;
+    }
+    else{
+      return Task6(i - 1) + Task6(i - 2);
+    }
+  }
+    
+alert(Task6(10));
