@@ -1,40 +1,199 @@
+//================Settings===================
+  let anim_speed = 25;
+  let start_satiety = 50;
+  let start_gladness = 50;
+  let start_sleep = 50;
+  let start_health = 50;
+//================Settings===================
+let current_animal = "Вівця";
+
 let animal = {
-    satiety: 25,
-    gladness: 25,
-    sleep: 50,
-    health: 50,
+    name: "Animal",
+    satiety: start_satiety,
+    gladness: start_gladness,
+    sleep: start_sleep,
+    health: start_health,
     eat() {
-      this.satiety += 25;
-      setEat(this.satiety);
+      if(this.satiety != 100){
+        this.satiety += 20;
+        if(this.satiety > 100){
+          this.satiety = 100;
+        }
+        this.health += 5;
+        this.gladness += 5;
+        document.getElementById("emotion").innerHTML = "Ням-Ням... Смачно";
+      }
+      else{
+        this.health -= 10;
+        this.gladness -= 5;
+        this.sleep -= 5;
+        document.getElementById("emotion").innerHTML = "Ням-Ням... Але забагато";
+      }
+      setAnimal(this);
+      
     },
     fun() {
-        this.gladness += 25;
-        setFun(this.gladness);
+      if(this.gladness != 100){
+        this.gladness += 20;
+        if(this.gladness > 100){
+          this.gladness = 100;
+        }
+        this.sleep -= 15;
+        this.satiety -= 5;
+        this.health -= 5;
+        document.getElementById("emotion").innerHTML = "Ура-ураа... граємось";
+      }
+      else{
+        this.health -= 10;
+        this.satiety -= 10;
+        this.sleep -= 10;
+        document.getElementById("emotion").innerHTML = "Я дуже втомився";
+      }
+      setAnimal(this);
     },
     sleeping() {
-        this.sleep += 25;
+      if(this.sleep != 100){
+        this.sleep += 20;
+        if(this.sleep > 100){
+          this.sleep = 100;
+        }
+        this.satiety -= 15;
+        document.getElementById("emotion").innerHTML = "Z-z-z-z-z-z-z";
+      }
+      else{
+        this.satiety -= 20;
+        this.health -= 10;
+        this.gladness -= 5;
+        document.getElementById("emotion").innerHTML = "Z-z-z-z-z-z-z";
+      }
+    
+        setAnimal(this);
     },
     treated() {
-        this.health += 25;
+      if(this.health != 100){
+        this.health += 20;
+        if(this.health > 100){
+          this.health = 100;
+        }
+        this.sleep -= 10;
+        this.satiety -= 10;
+        this.gladness += 10;
+        
+      }
+      else{
+        this.satiety -= 15;
+        this.gladness -= 10;
+        this.sleep -= 15;
+      }
+        setAnimal(this);
     },
+    
   };
 
 let ovca = {
-    __proto__: animal
+  name: "Вівця",
+  __proto__: animal
+};
+let chicken = {
+  name: "Курка",
+  __proto__: animal
 };
 
 function eat(){
-    ovca.eat();
+  switch(current_animal){
+    case "Вівця":
+      ovca.eat();
+    break;
+    case "Курка":
+      chicken.eat();
+    break;
+    default:
+      break;
+  }
+
 }
 function fun(){
-    ovca.fun();
+  switch(current_animal){
+    case "Вівця":
+      ovca.fun();
+    break;
+    case "Курка":
+      chicken.fun();
+    break;
+    default:
+      break;
+  }
+}
+function sleep(){
+  switch(current_animal){
+    case "Вівця":
+      ovca.sleeping();
+    break;
+    case "Курка":
+      chicken.sleeping();
+    break;
+    default:
+      break;
+  }
+}
+function treated(){
+  switch(current_animal){
+    case "Вівця":
+      ovca.treated();
+    break;
+    case "Курка":
+      chicken.treated();
+    break;
+    default:
+      break;
+  }
 }
 
+setAnimal(ovca);
+
+function setAnimal(anim){
+  document.getElementById("animal_name").innerHTML = anim.name;
+  if(anim.name == "Вівця"){
+    document.getElementById("logo").src = "../images/ovca.png";
+  }
+  else if(anim.name == "Курка"){
+    document.getElementById("logo").src = "../images/chicken.png";
+  }
+  setEat(anim.satiety);
+  setFun(anim.gladness);
+  setSleep(anim.sleep);
+  setHealth(anim.health);
+}
 
 function setEat(need) {
       let elem = document.getElementById("syt_prog");
       let height = elem.style.height;
-      let id = setInterval(frame, 15);
+      height = Number(height.replace("%", ""));
+      let id = setInterval(frame, anim_speed);
+      function frame() {
+        if (height >= 100 || height == need) {
+          clearInterval(id);
+        } 
+        else {
+            if(need > height){
+                height ++;
+            }
+          else{
+            height--;
+          }
+          elem.style.height = height + "%";
+        }
+        if(height > 95){
+          elem.style.borderRadius = "5px";
+        }
+      }
+  }
+
+  function setFun(need) {
+    let elem = document.getElementById("fun_prog");
+      let height = elem.style.height;
+      height = Number(height.replace("%", ""));
+      let id = setInterval(frame, anim_speed);
       function frame() {
         if (height >= 100 || height == need) {
           clearInterval(id);
@@ -48,25 +207,67 @@ function setEat(need) {
           }
           elem.style.height = height + "%";
         }
-      }
+        if(height > 95){
+          elem.style.borderRadius = "5px";
+        }
+      } 
   }
 
-  function setFun(need) {
-    let elem = document.getElementById("fun_prog");
-    let height = elem.style.height;
-    let id = setInterval(frame, 15);
-    function frame() {
-      if (height >= 100 || height == need) {
-        clearInterval(id);
-      } 
-      else {
-          if(need > height){
-              height++;
+  function setSleep(need) {
+    let elem = document.getElementById("sleep_prog");
+      let height = elem.style.height;
+      height = Number(height.replace("%", ""));
+      let id = setInterval(frame, anim_speed);
+      function frame() {
+        if (height >= 100 || height == need) {
+          clearInterval(id);
+        } 
+        else {
+            if(need > height){
+                height++;
+            }
+          else{
+            height--;
           }
-        else{
-          height--;
+          elem.style.height = height + "%";
         }
-        elem.style.height = height + "%";
-      }
+        if(height > 95){
+          elem.style.borderRadius = "5px";
+        }
+      } 
+  }
+
+  function setHealth(need) {
+    let elem = document.getElementById("health_prog");
+      let height = elem.style.height;
+      height = Number(height.replace("%", ""));
+      let id = setInterval(frame, anim_speed);
+      function frame() {
+        if (height >= 100 || height == need) {
+          clearInterval(id);
+        } 
+        else {
+            if(need > height){
+                height++;
+            }
+          else{
+            height--;
+          }
+          elem.style.height = height + "%";
+        }
+        if(height > 95){
+          elem.style.borderRadius = "5px";
+        }
+      } 
+  }
+
+  function changeAnimal(elem){
+    if(elem == "Курка"){
+      current_animal = "Курка";
+      setAnimal(chicken);
     }
-}
+    else if(elem == "Вівця"){
+      current_animal = "Вівця";
+      setAnimal(ovca);
+    }
+  }

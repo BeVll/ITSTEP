@@ -8,6 +8,8 @@
     width: 500px;
     margin: auto;
     background-color: #EFEFEF;
+    display: inline-block;
+    margin-left: -5px;
 }
 .fon_prog{
     display: inline-block;
@@ -18,12 +20,31 @@
     position: relative;
     margin: 5px;
 }
+#animal_name{
+    display: block;
+    margin: auto;
+    padding-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    color: #3b3a3a;
+}
+
+#emotion{
+    display: block;
+    margin: auto;
+    padding-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #3b3a3a;
+}
 .parameters{
     margin-left: 20px;
 }
 .prog{
     width: 100%;
-    height: 25%;
+    height: 50%;
     background-color: #50C878;
     bottom: 0;
     border-radius: 0 0 5px 5px;
@@ -39,7 +60,7 @@
     height: 6%;
     line-height: 6%;
     z-index: 15;
-    font-weight: 500;
+    font-weight: 600;
 }
 .photo{
     padding: 20px;
@@ -66,4 +87,44 @@
 }
 .buttons button:hover{
     background-color: #2363a2;
+}
+
+ul{
+    list-style: none;
+}
+
+.list{
+    width: 150px;
+    background-color: #ffffff;
+    display: inline-block;
+    top: 0;
+    vertical-align: top;
+    margin: 0;
+}
+li:first-child{
+    margin: 0;
+}
+li{
+    width: 100%;
+    background-color: #318CE7;
+    margin: 3px 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+li:hover{
+    background-color: #2363a2;
+}
+li span{
+    display: block;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px 0;
+}
+li img{
+    height: 100px;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
 }

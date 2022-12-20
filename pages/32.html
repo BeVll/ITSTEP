@@ -8,14 +8,28 @@
     <link rel="stylesheet" href="../css/task32.css">
 </head>
 <body>
+    <div class="list">
+        <ul>
+            <li onclick="changeAnimal('Вівця')">
+
+                <img src="../images/ovca.png" alt="">
+                <span>Вівця</span>
+            </li>
+            <li onclick="changeAnimal('Курка')">
+                <img src="../images/chicken.png" alt="">
+                <span>Курка</span>
+            </li>
+        </ul>
+    </div>
     <div class="main">
+        
         <div class="parameters">
             <div class="fon_prog">
                 <span class="name_param">Ситість</span>
                 <div id="syt_prog" class="prog"></div>
             </div>
             <div class="fon_prog">
-                <span class="name_param">Веселість</span>
+                <span class="name_param">Настрій</span>
                 <div id="fun_prog" class="prog"></div>
             </div>
             <div class="fon_prog">
@@ -27,14 +41,16 @@
                 <div id="health_prog" class="prog"></div>
             </div>
         </div>
+        <span id="animal_name"></span>
         <div class="photo">
             <img id="logo" src="../images/ovca.png" alt="">
         </div>
+        <span id="emotion">Emotion</span>
         <div class="buttons">
             <button onclick="eat()">Eat</button>
             <button onclick="fun()">Play</button>
-            <button>Sleep</button>
-            <button>Be treated</button>
+            <button onclick="sleep()">Sleep</button>
+            <button onclick="treated()">Be treated</button>
         </div>
     </div>
     <script src="../js/32scr.js"></script>
