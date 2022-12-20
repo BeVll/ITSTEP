@@ -78,12 +78,13 @@ let animal = {
         this.sleep -= 10;
         this.satiety -= 10;
         this.gladness += 10;
-        
+        document.getElementById("emotion").innerHTML = "Ура-ураа... Я здоровий";
       }
       else{
         this.satiety -= 15;
         this.gladness -= 10;
         this.sleep -= 15;
+        document.getElementById("emotion").innerHTML = "Хмм... Навіщо? Я був здоровим";
       }
         setAnimal(this);
     },
@@ -171,20 +172,23 @@ function setEat(need) {
       height = Number(height.replace("%", ""));
       let id = setInterval(frame, anim_speed);
       function frame() {
-        if (height >= 100 || height == need) {
+        if (height == need) {
           clearInterval(id);
         } 
         else {
-            if(need > height){
+            if(need > height && height < 100){
                 height ++;
             }
-          else{
+          else if(height != 0){
             height--;
           }
           elem.style.height = height + "%";
         }
         if(height > 95){
           elem.style.borderRadius = "5px";
+        }
+        else{
+          elem.style.borderRadius = "0 0 5px 5px";
         }
       }
   }
@@ -195,20 +199,23 @@ function setEat(need) {
       height = Number(height.replace("%", ""));
       let id = setInterval(frame, anim_speed);
       function frame() {
-        if (height >= 100 || height == need) {
+        if (height == need) {
           clearInterval(id);
         } 
         else {
-            if(need > height){
+          if(need > height && height < 100){
                 height++;
             }
-          else{
+          else if(height != 0){
             height--;
           }
           elem.style.height = height + "%";
         }
         if(height > 95){
           elem.style.borderRadius = "5px";
+        }
+        else{
+          elem.style.borderRadius = "0 0 5px 5px";
         }
       } 
   }
@@ -219,20 +226,23 @@ function setEat(need) {
       height = Number(height.replace("%", ""));
       let id = setInterval(frame, anim_speed);
       function frame() {
-        if (height >= 100 || height == need) {
+        if (height == need) {
           clearInterval(id);
         } 
         else {
-            if(need > height){
+          if(need > height && height < 100){
                 height++;
             }
-          else{
+          else if(height != 0){
             height--;
           }
           elem.style.height = height + "%";
         }
         if(height > 95){
           elem.style.borderRadius = "5px";
+        }
+        else{
+          elem.style.borderRadius = "0 0 5px 5px";
         }
       } 
   }
@@ -243,20 +253,23 @@ function setEat(need) {
       height = Number(height.replace("%", ""));
       let id = setInterval(frame, anim_speed);
       function frame() {
-        if (height >= 100 || height == need) {
+        if (height == need) {
           clearInterval(id);
         } 
         else {
-            if(need > height){
+          if(need > height && height < 100){
                 height++;
             }
-          else{
+          else if(height != 0){
             height--;
           }
           elem.style.height = height + "%";
         }
         if(height > 95){
           elem.style.borderRadius = "5px";
+        }
+        else{
+          elem.style.borderRadius = "0 0 5px 5px";
         }
       } 
   }
