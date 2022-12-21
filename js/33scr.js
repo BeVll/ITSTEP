@@ -155,22 +155,22 @@ let time = {
         return `${this.hours}:${this.minutes}:${this.seconds}`;
     },
     addseconds(count){
-        let d = new Date(this.show());
-        d.setSeconds(d.getSeconds + count);
+        let d = new Date("1995-12-17 " + this.show());
+        d.setSeconds(d.getSeconds() + count);
         this.hours = d.getHours();
         this.minutes = d.getMinutes();
         this.seconds = d.getSeconds();
     },
     addminutes(count){
-        let d = new Date(this.show());
-        d.setMinutes(d.getMinutes + count);
+        let d = new Date("1995-12-17 " + this.show());
+        d.setMinutes(d.getMinutes() + count);
         this.hours = d.getHours();
         this.minutes = d.getMinutes();
         this.seconds = d.getSeconds();
     },
     addhours(count){
-        let d = new Date(this.show());
-        d.setHours(d.getHours + count);
+        let d = new Date("1995-12-17 " + this.show());
+        d.setHours(d.getHours() + count);
         this.hours = d.getHours();
         this.minutes = d.getMinutes();
         this.seconds = d.getSeconds();
